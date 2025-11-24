@@ -1,0 +1,12 @@
+service: "service:SeattleEnergyService"
+
+description: "API de prédiction de la consommation d'énergie des bâtiments de Seattle."
+
+include:
+  - "service.py"
+
+models:
+  - "seattle_energy_forest_regressor:latest"
+
+python:
+  requirements_txt: "./requirements.txt"
