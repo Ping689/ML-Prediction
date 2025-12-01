@@ -36,8 +36,11 @@ try:
     # Définir le modèle final avec les meilleurs hyperparamètres
     final_rf_model = RandomForestRegressor(
         n_estimators=200,
-        max_depth=20,
+        max_depth=None,
+        max_features='sqrt',
+        min_samples_leaf=1,
         min_samples_split=2,
+        bootstrap=True
         random_state=42,
         n_jobs=-1
     )
